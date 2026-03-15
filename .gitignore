@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.wrangler/
+.vercel/
+.idea/
+.dev.vars
+.dev.vars.*
+tmp-wrangler*.txt
+src-tauri/target/
+target/
+src-tauri/Cargo.lock

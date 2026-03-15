@@ -1,0 +1,19 @@
+{
+  "tasks": {
+    "build": "pnpm run build",
+    "dev": "deno run --allow-env --allow-net --allow-read --watch deno.server.ts",
+    "start": "deno run --allow-env --allow-net --allow-read deno.server.ts"
+  },
+  "imports": {
+    "hono": "npm:hono@^4.12.7",
+    "hono/": "npm:hono@^4.12.7/"
+  },
+  "deploy": {
+    "install": "npx pnpm@10.32.1 install --frozen-lockfile",
+    "build": "npx pnpm@10.32.1 run build",
+    "runtime": {
+      "type": "dynamic",
+      "entrypoint": "./deno.server.ts"
+    }
+  }
+}
